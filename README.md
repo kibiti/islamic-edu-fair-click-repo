@@ -1,4 +1,28 @@
 # Islamic Education Fair Click Repo
+## Repo Structure
+```txt
+islamic-edu-fair-click-repo/
+|
+├── contacts/
+│   ├── institutions.csv
+│   ├── schools.csv
+│   └── contacts_template.csv
+│
+├── integrations/
+│   ├── whatsapp_click.py
+│   ├── email_sender.py
+│   ├── booth_map.py
+│   ├── event_schedule.py
+│   └── ussd_registration.py
+│
+├── README.md
+│
+└── templates/
+    ├── university_invitation.txt
+    ├── sponsor_proposal.txt
+    ├── school_invitation.txt
+    └── media_partnership.txt
+```
 
 A ready-to-use, extensible repository for managing, contacting, and integrating Islamic institutions and schools for education events. Features include WhatsApp messaging, email automation, booth map generation, event scheduling, and USSD registration.
 
