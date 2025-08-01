@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Islamic Edu Fair Booth Map</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>#map { height: 600px; }</style>
+</head>
+<body>
+<h2>Interactive Booth Map</h2>
+<div id="map"></div>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+var map = L.map('map').setView([-1.286389, 36.817223], 12); // Nairobi center coords
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+// Replace with actual booth data from your CSV, e.g. using Python to generate JS array
+var booths = [
+  {name: "Umma University", lat: -1.425, lng: 36.926, link: "https://umma.ac.ke"},
+  {name: "Kenyatta University", lat: -1.179, lng: 36.939, link: "https://ku.ac.ke"},
+  // Add more booths here
+];
+
+booths.forEach(function(booth, idx){
+   var marker = L.marker([booth.lat, booth.lng]).addTo(map);
+   marker.bindPopup('<b>' + booth.name + '</b><br/><a href="' + booth.link + '" target="_blank">Website</a>');
+});
+</script>
+</body>
+</html>
