@@ -26,6 +26,22 @@ islamic-edu-fair-click-repo/
 
 A ready-to-use, extensible repository for managing, contacting, and integrating Islamic institutions and schools for education events. Features include WhatsApp messaging, email automation, booth map generation, event scheduling, and USSD registration.
 
+## USSD Registration Integration
+
+The repo includes a backend for USSD event registration (*386*55#).  
+To run the backend locally:
+
+```bash
+cd backend
+npm install express body-parser
+node server.js
+```
+
+- **/ussd/africastalking**: Africa's Talking webhook endpoint  
+- **/ussd/generic**: Generic endpoint for other gateways
+
+Configure your USSD gateway to POST requests to your server’s public URL.
+
 ## Features
 
 - CSV directory of all institutions and schools (with WhatsApp, emails, map locations)
